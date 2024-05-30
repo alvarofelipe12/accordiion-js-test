@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/script.js" defer></script>
+  <style>
+    .accordion {
+      max-width: 400px;
+    }
+
+    .accordion-title {
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    /* specifity incresed to 3 so it will overwrite the display none */
+    .accordion-item.expanded .accordion-content {
+      display: block;
+    }
+
+    .accordion-title::after {
+      content: '>';
+      float: right;
+    }
+
+    .accordion-item.expanded .accordion-title::after {
+      content: '<';
+    }
+  </style>
+  <title>Accordion in JS</title>
+</head>
+
+<body>
+  <div class="accordion">
+    <div class="accordion-item">
+      <h1 class="accordion-title">Item 1</h1>
+      <div class="accordion-content">
+        Description
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h1 class="accordion-title">Item 2</h1>
+      <div class="accordion-content">
+        Description
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h1 class="accordion-title">Item 3</h1>
+      <div class="accordion-content">
+        Description
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h1 class="accordion-title">Item 4</h1>
+      <div class="accordion-content">
+        Description
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
